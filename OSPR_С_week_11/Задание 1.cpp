@@ -4,9 +4,9 @@ using namespace std;
 
 #define MASS_SIZE 10
 
-void arrayOut(int mass[], int size)
+void printArray(int mass[], int size)
 {
-	cout << "[" << size << "] = {";
+	cout << "Array of size [" << size << "] = {";
 	for (int i = 0; i < size; i++)
 	{
 		cout << mass[i] << ", ";
@@ -14,7 +14,7 @@ void arrayOut(int mass[], int size)
 	cout << "};" << endl;
 }
 
-void arrayGenerator(int mass[], int size, int maxValue = 20)
+void generateArray(int mass[], int size, int maxValue = 20)
 {
 	srand(time(NULL));
 	for (int i = 0; i < size; i++)
@@ -22,13 +22,13 @@ void arrayGenerator(int mass[], int size, int maxValue = 20)
 		mass[i] = rand() % maxValue;
 	}
 }
-void outMaxAndMinValueArray(int mass[], int size)
+void printMaxAndMinValue(int mass[], int size)
 {
 	int maxValue = mass[0];
 	int minValue = mass[0];
-	int maxValueKey = 0;
-	int minValueKey = 0;
-	for (int i = 1; i < size; i++)
+	int maxValueIndex = 0;
+	int minValueIndex = 0;
+	for (int i = 0; i < size; i++)
 	{
 		if (maxValue <= mass[i])
 		{
