@@ -23,7 +23,7 @@ void arrayGenerator(int mass[], int size, int maxValue = 20)
 	}
 }
 
-int counterPrimes(int mass[], int size)
+int countPrimeNumbers(int mass[], int size)
 {
 	int counter = 0;
 	bool numberPrimes;
